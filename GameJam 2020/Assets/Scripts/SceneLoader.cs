@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    Animator sceneAnim;
+    //Animator sceneAnim;
     int otherScene;
     int currentScene;
 
@@ -22,7 +22,6 @@ public class SceneLoader : MonoBehaviour
 
             case 1:                          //em caso de entrada em cena do jogo
                 otherScene = 0;
-                sceneAnim.SetBool("enteringScene", true);
                 break;
         }
     }
