@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuStateManager : MonoBehaviour
 {
-    public bool stateIdle = true;
+    public bool stateIdle = false;
     Animator menuAnim;
 
     void Start()

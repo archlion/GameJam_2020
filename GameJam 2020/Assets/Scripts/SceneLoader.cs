@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
 
     void Start()
     {
-        sceneAnim = GetComponent<Animator>();
+        //sceneAnim = GetComponent<Animator>();
         currentScene = SceneManager.GetActiveScene().buildIndex;
 
         switch (currentScene)
@@ -27,10 +27,10 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void SwitchScene()                           //é chamada por algum script ligado a um botão para iniciar a transição de cena
+    /*public void SwitchScene()                           //é chamada por algum script ligado a um botão para iniciar a transição de cena
     {
         sceneAnim.SetBool("exitingScene", true);        //ativa a animação de saída
-    }
+    }*/
 
     public void LoadNewScene()                          //é chamada pela animação de saída
     {
@@ -39,15 +39,15 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadSceneAsync(otherScene);         // carrega a outra cena
     }
 
-    public void SceneChangeComplete()
+    /*public void SceneChangeComplete()
     {
         Debug.Log("Finished changing to scene " + currentScene + ".");
         sceneAnim.SetBool("enteringScene", false);
-    }
+    }*/
 
-    public void QuitGame()                              //fecha o jogo
+    /*public void QuitGame()                              //fecha o jogo
     {
         Application.Quit();
         Debug.Log("Game would have quit.");
-    }
+    }*/
 }
