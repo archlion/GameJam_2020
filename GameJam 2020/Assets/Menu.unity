@@ -662,7 +662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Um jogo patotesco
+  m_Text: "Se\xF1or\nZumbi"
 --- !u!222 &1531015623
 CanvasRenderer:
   m_ObjectHideFlags: 0
