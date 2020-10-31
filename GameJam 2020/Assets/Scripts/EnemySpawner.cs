@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        Invoke("SpawnEnemy", 0.5f);
+        Invoke("SpawnEnemy", 3f);
     }
 
     private void Update()
