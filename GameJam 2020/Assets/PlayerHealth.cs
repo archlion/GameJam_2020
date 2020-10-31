@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameManager gameManager;
 
     public int health = 100;
 
@@ -22,8 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        
-        Destroy(gameObject);
+             
         FindObjectOfType<GameManager>().EndGame();
 
     }
