@@ -5,11 +5,14 @@ using UnityEngine;
 public class Bunny : MonoBehaviour
 {
     public Transform player;
-
+    
     public bool isFlipped = false;
 
     public void LookAtPlayer()
     {
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
 
