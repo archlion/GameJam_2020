@@ -34,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsJumping", false);
 
     }
+
+    public void StepSound()
+    {
+        FindObjectOfType<AudioManager>().Play("step");           //play step sound
+    }
      void FixedUpdate()
     {
 

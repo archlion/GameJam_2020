@@ -33,11 +33,15 @@ public class PlayerCombat : MonoBehaviour
 
             animator.SetTrigger("Attack");
 
+            FindObjectOfType<AudioManager>().Play("swing");           //play swing sound
+
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
             foreach (Collider2D enemy in hitEnemies)
             {
                 Debug.Log("Attack Hit" + enemy.name);
+
+                FindObjectOfType<AudioManager>().Play("hit");           //play hit sound
 
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
             }

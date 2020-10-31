@@ -8,6 +8,12 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    Animator HPAnim;
+
+    void Start()
+    {
+        HPAnim = GetComponent<Animator>();
+    }
 
     public void SetMaxHealth(int health)
     {
@@ -19,6 +25,8 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(int health)
     {
+        HPAnim.SetTrigger("Flash");
+        
         slider.value = health;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);

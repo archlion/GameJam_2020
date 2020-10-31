@@ -25,6 +25,8 @@ public class PlayerHealth : MonoBehaviour
 
         StartCoroutine(DamageAnimation());
 
+        FindObjectOfType<AudioManager>().Play("damage");           //play damage sound
+
         if (currentHealth <= 0)
         {
             Die();

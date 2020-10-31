@@ -55,4 +55,9 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void SpawnSound()
+    {
+        FindObjectOfType<AudioManager>().Play("spawnbunny");           //play spawnbunny sound
+    }
+
 }
