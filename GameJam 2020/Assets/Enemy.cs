@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    private EnemySpawner enemySpawner;
+
     public Animator animator;
 
     public int maxHealth = 100;
 
     int currentHealth;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,7 +32,8 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void Die()
+
+    public void Die()
     {
         Debug.Log("enemy died!");
 
@@ -41,7 +44,15 @@ public class Enemy : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
-       
+        Destroy(gameObject, 5f);
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemySpawner.enemiesInRoom--;
+        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        {
+            enemySpawner.spawnerDone = true;
+        }
+           
+
     }
 
 }
