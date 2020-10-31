@@ -6,24 +6,33 @@ public class PlayerHealth : MonoBehaviour
 {
     public GameManager gameManager;
 
-    public int health = 100;
+    public int maxHealth = 100;
+    public int currentHealth;
 
+    public HealthBar healthBar;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
 
         StartCoroutine(DamageAnimation());
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
     }
 
     void Die()
-    {
-             
+    {     
         FindObjectOfType<GameManager>().EndGame();
 
     }
