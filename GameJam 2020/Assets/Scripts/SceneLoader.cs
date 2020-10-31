@@ -49,4 +49,10 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
         Debug.Log("Game would have quit.");
     }*/
+
+    public void RestartScene()
+    {
+        Debug.Log("Restarting Scene" + currentScene + ".");
+        SceneManager.LoadScene(currentScene);
+    }
 }
