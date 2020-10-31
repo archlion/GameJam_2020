@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bunny_Run : StateMachineBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 6.5f;
     public float attackRange = 3f;
 
     Transform player;
