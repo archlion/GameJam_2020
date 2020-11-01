@@ -13080,7 +13080,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0434017, y: 0.19655252}
+  m_Offset: {x: -0.35673904, y: 0.19655252}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13091,7 +13091,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 108.12846, y: 1.599726}
+  m_Size: {x: 132.68362, y: 1.599726}
   m_EdgeRadius: 0
 --- !u!1 &1485460301
 GameObject:
@@ -13503,6 +13503,7 @@ RectTransform:
   - {fileID: 448029647}
   - {fileID: 1553182956}
   - {fileID: 1245318615}
+  - {fileID: 48833736}
   m_Father: {fileID: 1596688746}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14804,6 +14805,7 @@ MonoBehaviour:
   - {fileID: 984676263}
   enemies:
   - {fileID: 708632252219320094, guid: 5bc7e20686cc43a47b65135ecc05125f, type: 3}
+  - {fileID: 8566633425715517184, guid: 192f83216d244254f8e9bbca785cf09e, type: 3}
   minTimeBtwSpawns: 3
   maxTimeBtwSpawns: 6
   canSpawn: 1

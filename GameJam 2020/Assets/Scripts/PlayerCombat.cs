@@ -44,6 +44,7 @@ public class PlayerCombat : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("hit");           //play hit sound
 
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                
             }
 
             
