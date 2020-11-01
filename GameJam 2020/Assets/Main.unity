@@ -15009,7 +15009,7 @@ MonoBehaviour:
   - {fileID: 708632252219320094, guid: 5bc7e20686cc43a47b65135ecc05125f, type: 3}
   - {fileID: 8566633425715517184, guid: 192f83216d244254f8e9bbca785cf09e, type: 3}
   minTimeBtwSpawns: 3
-  maxTimeBtwSpawns: 6
+  maxTimeBtwSpawns: 4.5
   canSpawn: 1
   spawnTime: 100
   enemiesInRoom: 0
