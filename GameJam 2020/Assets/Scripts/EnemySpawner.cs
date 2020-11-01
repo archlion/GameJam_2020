@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     public int enemiesInRoom;
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
+    private bool firstSpawn=true; 
 
     private void Start()
     {
@@ -47,9 +48,16 @@ public class EnemySpawner : MonoBehaviour
         }
 
         Invoke("SpawnEnemy", timeBtwSpawns);
-        if(spawnerDone)
+
+        if (firstSpawn)
         {
-            spawnerDoneGameObject.SetActive(true);
+            firstSpawn = false;
+            FindObjectOfType<AudioManager>().Play("bgmusic");           //play bgmusic on first spawn
+        }
+
+            if (spawnerDone)
+        {
+            spawnerDoneGameObject.SetActive(true);        
         }
     }
 }
