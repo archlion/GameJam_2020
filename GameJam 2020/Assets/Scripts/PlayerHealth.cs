@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {     
-        FindObjectOfType<GameManager>().EndGame();
+        FindObjectOfType<GameManager>().LoseGame();
 
     }
 

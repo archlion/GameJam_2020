@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy_Elf : MonoBehaviour
 {
-
     private EnemySpawner enemySpawner;
 
     public Animator animator;
@@ -44,25 +43,14 @@ public class Enemy : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
-        Destroy(gameObject, 3.5f);
+        Destroy(gameObject, 5f);
         enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.enemiesInRoom--;
-        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        if (enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
         {
             enemySpawner.spawnerDone = true;
         }
-           
+
 
     }
-
-    public void SpawnBunnySound()
-    {
-        FindObjectOfType<AudioManager>().Play("spawnbunny");           //play spawnbunny sound
-    }
-
-    public void SpawnElfSound()
-    {
-        FindObjectOfType<AudioManager>().Play("spawnelf");           //play spawnelf sound
-    }
-
 }
