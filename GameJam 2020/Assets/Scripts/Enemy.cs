@@ -47,11 +47,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject, 3.5f);
         enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.enemiesInRoom--;
-        if(enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
+        if (enemySpawner.spawnTime <= 0 && enemySpawner.enemiesInRoom <= 0)
         {
             enemySpawner.spawnerDone = true;
         }
-           
+
 
     }
 
@@ -65,4 +65,12 @@ public class Enemy : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("spawnelf");           //play spawnelf sound
     }
 
+    public void AttackBunny()
+    {
+        FindObjectOfType<AudioManager>().Play("attackBunny");
+    }
+    public void AttackElf()
+    {
+        FindObjectOfType<AudioManager>().Play("attackElf");
+    }
 }

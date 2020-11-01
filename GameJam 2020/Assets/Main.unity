@@ -15830,6 +15830,22 @@ MonoBehaviour:
     pitchVariance: 0.4
     loop: 0
     source: {fileID: 0}
+  - name: attackBunny
+    clip: {fileID: 8300000, guid: 4a90b4bbd16ad1e46a4d63b97578d594, type: 3}
+    volume: 0.55
+    volumeVariance: 0
+    pitch: 2.5
+    pitchVariance: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: attackElf
+    clip: {fileID: 8300000, guid: 4a90b4bbd16ad1e46a4d63b97578d594, type: 3}
+    volume: 0.55
+    volumeVariance: 0
+    pitch: 3
+    pitchVariance: 0.6
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1836619013
 Transform:
   m_ObjectHideFlags: 0
